@@ -1,0 +1,31 @@
+.form {
+    margin-top: 7.5vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.input {
+    font-size: 1rem;
+    font-family: "SUSE";
+    font-weight: bold;
+    color: var(--sub-color-2);
+    width: 33.33vw;
+    text-align: center;
+    border: 2px solid var(--sub-color-2);
+    border-radius: 7.5px;
+    height: 15px;
+    padding: 0.5em 1em;
+    margin: 1em;
+}
+
+.button {
+    margin: 0.5em;
+    font-size: 1rem;
+    background-color: var(--sub-color-2);
+    color: var(--sub-color-1);
+    padding: 0.3em 0.6em;
+    border: 2px solid var(--sub-color-1);
+    border-radius: 100px;
+    font-family: "SUSE";
+}

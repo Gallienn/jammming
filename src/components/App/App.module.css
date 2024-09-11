@@ -1,0 +1,38 @@
+@import '../colors.module.css';
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+
+.title {
+  margin: 0;
+  padding: 0.75em;
+  font-family: 'Keania One', sans-serif;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--main-color);
+  background-color: var(--bg-color);
+}
+
+.letters {
+  color: var(--sub-color-1);
+}
+
+.background {
+  flex: 1;
+  background-color: var(--bg-color);
+  /* background-image: url('./pic_4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  filter: grayscale(75%); */
+}
+
+.container2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
