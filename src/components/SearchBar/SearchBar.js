@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import {search} from '../../util/Spotify';
 import styles from './SearchBar.module.css';
 
 export default function SearchBar ({getTracks}) {
@@ -13,8 +12,7 @@ export default function SearchBar ({getTracks}) {
         event.preventDefault();
         const formData = new FormData(event.target);
         const query = formData.get('query');
-        const tracks = await search(query);
-        getTracks(tracks);
+        getTracks(query);
     }
 
     return (

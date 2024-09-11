@@ -1,9 +1,32 @@
-export default function TrackList({results}) {
+import Track from "../Track/Track";
+import './Tracklist.css';
+import { ReactComponent as IconAdd } from './add.svg';
+import { ReactComponent as IconRemove } from './remove.svg';
+
+export default function Tracklist(props) {
+    const handleClick = track => {
+        if (props.button === 'add') {
+            props.addTrackToPlaylist(track);
+        } else {
+            props.removeTrackFromPlaylist(track);
+        }
+    }
+
     return (
         <ul>
-            {results.map(({name, id, artists}) => {
-                <li id={id}>{name} - by - {artists[0]}</li>
-            })}
+            {(props.tracks || []).map(track => (
+                <>
+                    <li key={track.id}>
+                        <Track name={track.name} artist={track.artist} album={track.album}/>
+                        <button onClick={() => handleClick(track)}>
+                            {props.button === 'add' ? 
+                            <IconAdd className="icon-add"/> : 
+                            <IconRemove />}
+                        </button>
+                    </li>
+                    <hr/>
+                </>
+            ))}
         </ul>
     );
 }

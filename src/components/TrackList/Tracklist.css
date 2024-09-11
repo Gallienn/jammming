@@ -1,0 +1,32 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+button {
+    width: fit-content;
+    border: 2px solid var(--sub-color-2);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+button :hover {
+    border: 2px solid var(--sub-color-1);
+    border-radius: 50%;
+}
+
+.icon-add {
+    width: 80%;
+}
+
+hr {
+    margin: 0 auto 0 0;
+    opacity: 0.50;
+    color: var(--sub-color-4);
+}

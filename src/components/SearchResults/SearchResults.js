@@ -1,14 +1,15 @@
-import styles from './SearchResults.module.css';
+import './SearchResults.css';
+import Tracklist from '../Tracklist/Tracklist';
 
-export default function SearchResults({results}) {
+export default function SearchResults(props) {
     return (
-        <div className={styles.container}>
-            <p className={styles.title}>results</p>
-            <ul>
-            {results.map(({name, id, artists}) => (
-                <li key={id}>{name} - by - {artists.map(artist => artist.name).join(', ')}</li>
-            ))}
-            </ul>
+        <div className="container">
+            <p className="container-title">results</p>
+            <Tracklist 
+                tracks={props.searchResults} 
+                button="add" 
+                addTrackToPlaylist={props.addTrackToPlaylist}
+            />
         </div>
     );
 }

@@ -1,0 +1,19 @@
+.container {
+    margin: 50px 30px 50px 0;
+    border-radius: 10px;
+    padding: 0 20px;
+    width: 33.33vw;
+    min-height: 50vh;
+    background-color: var(--sub-color-2);
+}
+
+.container-title {
+    margin: 0;
+    padding: 0.5em 0;
+    color: var(--sub-color-1);
+    font-family: 'suse';
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    text-align: right;
+}
