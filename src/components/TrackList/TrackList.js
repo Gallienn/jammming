@@ -15,17 +15,15 @@ export default function Tracklist(props) {
     return (
         <ul>
             {(props.tracks || []).map(track => (
-                <>
-                    <li key={track.id}>
-                        <Track name={track.name} artist={track.artist} album={track.album}/>
-                        <button onClick={() => handleClick(track)}>
-                            {props.button === 'add' ? 
-                            <IconAdd className="icon-add"/> : 
-                            <IconRemove />}
-                        </button>
-                    </li>
+                <li key={track.id}>
+                    <Track name={track.name} artist={track.artist} album={track.album}/>
+                    <button onClick={() => handleClick(track)}>
+                        {props.button === 'add' ? 
+                        <IconAdd className="icon-add"/> : 
+                        <IconRemove />}
+                    </button>
                     <hr/>
-                </>
+                </li>
             ))}
         </ul>
     );

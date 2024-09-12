@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Tracklist from '../Tracklist/Tracklist';
-import {createPlaylist} from '../../util/Spotify';
+import Spotify from '../../util/Spotify';
 import './Playlist.css';
 
 export default function Playlist(props) {

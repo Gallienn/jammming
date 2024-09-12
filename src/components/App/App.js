@@ -1,27 +1,18 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
 import './App.css';
-import { getAuthorizationCode, createPlaylist, search } from '../../util/Spotify';
+import Spotify from '../../util/Spotify';
 
 function App() {
-  // AuthorizationCode Logic
-  const [authCode, setAuthCode] = useState('');
-  useEffect(() => {
-    const url = new URL(window.location.href);
-    const code = url.searchParams.get('code');
-    if (code) {
-      setAuthCode(code);
-    }
-  }, []);
 
   // Search Logic
   const [searchResults, setSearchResults] = useState([]);
   const getTracks = async (query) => {
-    console.log('Argument successfully passed to getTracks()');
-    console.log('Argument is: ' + query);
-    const tracks = await search(query, authCode);
+    console.log(`Function getTracks() starting...`);
+    console.log(`Argument is: ${query}\n`);
+    const tracks = await Spotify.search(query);
     setSearchResults(tracks);
   }
 
@@ -34,11 +25,11 @@ function App() {
     setPlaylist(prev => prev.filter(({id}) => id !== trackToRemove.id));
   }
 
-  // Creating the Playlist
+  // Saving the Playlist
   const newPlaylist = (playlistTitle) => {
-    console.log('Argument successfully passed to getTracks()');
-    console.log('Argument is: ' + playlistTitle);
-    createPlaylist(playlistTitle, authCode);
+    console.log(`Function newPlaylist() starting...`);
+    console.log(`Argument are: ${playlistTitle} and ${playlist}\n`);
+    Spotify.savePlaylist(playlistTitle, playlist);
   }
 
   return (
