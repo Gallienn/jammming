@@ -1,9 +1,9 @@
 import Track from "../Track/Track";
-import './Tracklist.css';
+import './TrackList.css';
 import { ReactComponent as IconAdd } from './add.svg';
 import { ReactComponent as IconRemove } from './remove.svg';
 
-export default function Tracklist(props) {
+export default function TrackList(props) {
     const handleClick = track => {
         if (props.button === 'add') {
             props.addTrackToPlaylist(track);

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Tracklist from '../Tracklist/Tracklist';
+import TrackList from '../TrackList/TrackList';
 import Spotify from '../../util/Spotify';
 import './Playlist.css';
 
@@ -26,7 +26,7 @@ export default function Playlist(props) {
                     placeholder="Enter a title"/>
                 <p className="container-title">playlist</p>
             </div>
-            <Tracklist 
+            <TrackList 
                 tracks={props.playlist} 
                 button="remove" 
                 removeTrackFromPlaylist={props.removeTrackFromPlaylist}

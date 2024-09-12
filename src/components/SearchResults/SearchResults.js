@@ -1,11 +1,11 @@
 import './SearchResults.css';
-import Tracklist from '../Tracklist/Tracklist';
+import TrackList from '../TrackList/TrackList';
 
 export default function SearchResults(props) {
     return (
         <div className="container">
             <p className="container-title">results</p>
-            <Tracklist 
+            <TrackList 
                 tracks={props.searchResults} 
                 button="add" 
                 addTrackToPlaylist={props.addTrackToPlaylist}
