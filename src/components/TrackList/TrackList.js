@@ -3,6 +3,8 @@ import './TrackList.css';
 import { ReactComponent as IconAdd } from './add.svg';
 import { ReactComponent as IconRemove } from './remove.svg';
 
+
+
 export default function TrackList(props) {
     const handleClick = track => {
         if (props.button === 'add') {
