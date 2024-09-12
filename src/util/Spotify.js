@@ -1,6 +1,5 @@
 const clientId = 'd234b55a4b894fd0ba8e4a4d8ff7fef0';
 const clientSecret = '8a74293d68c1422cbbab3e7df4d0fbfc';
-const encodedCredentials = btoa(`${clientId}:${clientSecret}`);
 const redirectUri = 'http://localhost:3000';
 let accessToken = '';
 
